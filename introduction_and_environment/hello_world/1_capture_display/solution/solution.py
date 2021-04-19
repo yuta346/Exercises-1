@@ -2,10 +2,10 @@
 
 # Code your solution here
 
-# name =  input("Enter your name:")
-# age = input("Enter your age:")
+name =  input("Enter your name:")
+age = input("Enter your age:")
 
-# name,age = input("Enter your name and age").split()
+name,age = input("Enter your name and age").split()
 
-name = 'Charlie'
-age = '100'
+# name = 'Charlie'
+# age = '100'
