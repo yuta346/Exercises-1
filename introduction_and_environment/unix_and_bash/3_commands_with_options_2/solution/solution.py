@@ -2,7 +2,7 @@
 
 ONE = "grep elephant book.text"
 TWO = "mv notes.txt newdir"
-THREE = "grep string testdir"
+THREE = "grep -r 'string' testdir"
 FOUR = "rm -d empty"
 FIVE = "cd"
 SIX = "rm -r Downloads"
