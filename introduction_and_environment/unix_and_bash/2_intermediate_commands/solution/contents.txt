@@ -1,0 +1,6 @@
+__pycache__
+contents.txt
+solution.py
+test_solution.py
+testdir
+testfile.txt

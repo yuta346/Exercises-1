@@ -1,0 +1,1 @@
+/Users/yuta/Documents/Byte/PythonBootCamp/Exercises-1/introduction_and_environment/unix_and_bash/2_intermediate_commands/solution
