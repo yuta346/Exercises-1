@@ -8,3 +8,4 @@
 
 # Create a variable called `answer` in the **solution.py** and set its value to the string `"a"`, `"b"`, `"c"`, or `"d"`.
 
+answer = "a"
