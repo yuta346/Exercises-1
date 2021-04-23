@@ -1,3 +1,5 @@
+#Completed
+
 # ## Problem Description
 # Define a recursive Python function named `reverse` that consumes one argument `string`. 
 # The function returns the a string whos contents is the reverse of `string` 
@@ -9,7 +11,8 @@
 # ```
 
 def reverse(string):
-    pass
-
-
+    if len(string)==0:
+        return string
+    else:
+        return string[-1]+reverse(string[:-1])
 print(reverse("hello"))
