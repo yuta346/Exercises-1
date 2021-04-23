@@ -11,14 +11,16 @@ from provided_code import d
 
 
 
-for i in range(1,6):
+for i in range(1,len(d)+1):
     if d.get(i, 'Not Found') == 'Not Found':
         d[i]='found it!'
 
 
 
 # _dict = {1 : 'IN', 2 : 'AU', 3 : 'BR',4 : 'JP', 6 : 'MA'}
-# for i in range(1,6):
+
+
+# for i in range(1,len(_dict)+1):
 #     if _dict.get(i, 'Not Found') == 'Not Found':
 #         _dict[i]='found it!'
     

@@ -16,9 +16,9 @@ from provided_code import set1, set2
 # finds the differences between the two sets and stores these values in a variable called `diff`.
 
 
-diff = set1 - set2
+diff =  set1 - set2
 
-set1 = {'apple','orange','kiwi'}
-set2 = {'apple','orange','grape'}
-diff = set1 - set2
-print(diff)
+# set1 = {'apple','orange','kiwi'}
+# set2 = {'apple','orange','grape'}
+# diff = set1 - set2
+# print(diff)
