@@ -8,4 +8,6 @@
 # ```
 
 def multiply(a,b):
-    
+    return 
+
+print(multiply(2,3))

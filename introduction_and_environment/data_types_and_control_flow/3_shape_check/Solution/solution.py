@@ -15,7 +15,7 @@ g_lst = []
 
 while True:
     g_int = int(input("enter an integer"))
-    if g_int in [3,4,5,6,7,8,9]:
+    if shape_dict.get(g_int):
         g_lst.append(shape_dict[g_int])
     else:
         break
