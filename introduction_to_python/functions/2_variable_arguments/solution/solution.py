@@ -10,9 +10,8 @@
 # ```
 
 def concat_args(*args):
-    if not args:
-        return ''
     result = ''
+    if not args: return ''
     for arg in args:
         result+=arg
     return result
