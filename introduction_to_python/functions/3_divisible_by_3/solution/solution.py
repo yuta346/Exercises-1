@@ -11,8 +11,11 @@
 # ```
 
 def divisible_by_3(*args):
-    result  = []
-    for arg in args:
-        if arg%3==0:
-            result.append(arg)
-    return result
+    # result  = []
+    # for arg in args:
+    #     if arg%3==0:
+    #         result.append(arg)
+    # return result
+    return list(filter(lambda x: x%3==0, args))
+
+print(divisible_by_3(2, 3, 5, 6, 9))

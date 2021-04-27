@@ -25,4 +25,4 @@ def factorial(n):
         result*=i
     return result
 
-print(factorial(3))
+print(factorial(1))
