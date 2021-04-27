@@ -35,6 +35,6 @@ class children(Person):
 jim = Person('Jim Brown',45,None,[])
 suzy = Person('Suzy Brown',42,jim,[])
 jim.spouse = suzy
-martha = children('Martha Brown',18,None,[],[jim,suzy])
+martha = children('Martha Brown',18, None,[],[jim,suzy])
 jim.children.append(martha)
 suzy.children.append(martha)
