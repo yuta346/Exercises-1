@@ -24,7 +24,7 @@ class Person:
 
 class Child(Person):
     def __init__(self,name,age,spouse,children,parents):
-        Person.__init__(self,name,age,spouse,children)
+        super().__init__(name,age,spouse,children)
         self.parents = parents
     def get_siblings(self):
         child_set = set()

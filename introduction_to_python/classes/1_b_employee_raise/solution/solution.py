@@ -28,15 +28,18 @@ class Employee:
         self.salary = salary
         self.years_at_company = years_at_company
 
-def give_raises(arr):
-    for i in arr:
-        if i.years_at_company >=10 :
-            i.salary+=10000
-        elif i.years_at_company<10 and i.years_at_company>5:
-            i.salary+=8000
+    def give_raises(self, employee_lst):
+        for emp in employee_lst:
+            emp.give_raise()
+
+    def give_raise(self):
+        if self.years_at_company >=10 :
+            self.salary+=10000
+        elif self.years_at_company<10 and self.years_at_company>5:
+            self.salary+=8000
         else:
-            i.salary+=5000
-            
+            self.salary+=5000
+                
 
 
 

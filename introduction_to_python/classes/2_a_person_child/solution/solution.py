@@ -29,7 +29,7 @@ class Person:
 
 class children(Person):
     def __init__(self,name,age,spouse,children,parents):
-        Person.__init__(self,name,age,spouse,children)
+        super().__init__(name,age,spouse,children)
         self.parents = parents
 
 jim = Person('Jim Brown',45,None,[])
