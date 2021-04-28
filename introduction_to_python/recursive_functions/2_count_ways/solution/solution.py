@@ -17,4 +17,17 @@ def count_ways(steps):
     elif steps==1:
         return 1
     else: return count_ways(steps-1) + count_ways(steps-2)
-print(count_ways(4))
+print(count_ways(100))
+
+
+# def count_ways(steps):
+#     dp = [1,1]
+#     if steps==0:
+#         return dp[0]
+#     elif steps==1:
+#         return dp[1]
+#     else:
+#         for i in range(2,steps+1):
+#             dp.append(dp[i-1]+dp[i-2])
+#     return dp[-1]
+# print(count_ways(100))

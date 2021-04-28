@@ -11,8 +11,7 @@
 # ```
 
 def reverse(string):
-    if len(string)==0:
+    if not string:
         return string
-    else:
-        return string[-1]+reverse(string[:-1])
-print(reverse("hello"))
+    return string[-1]+reverse(string[:-1])
+print(reverse("hellooooo"))

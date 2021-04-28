@@ -20,5 +20,5 @@ def count_down_from(num):
     if num==0:
         return 
     print(num)
-    return count_down_from(num-1)
+    count_down_from(num-1)
 count_down_from(10)
