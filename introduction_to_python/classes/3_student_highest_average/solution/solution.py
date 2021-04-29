@@ -13,10 +13,10 @@ def highest_avg(stud_lst):
     max_average = 0
     max_avg_student_name =''
     for student in stud_lst:
-        if not student.grades:
-            average_score = 0
-        else: 
+        if student.grades:
             average_score = reduce(lambda x,y: x+y, student.grades)/len(student.grades)
+        else: 
+            average_score = 0
         if average_score > max_average:
             max_average = average_score
             max_avg_student_name = student.name

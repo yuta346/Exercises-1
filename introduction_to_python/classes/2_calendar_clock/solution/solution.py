@@ -19,9 +19,12 @@ class Calendar:
 
 class CalendarClock(Clock,Calendar):
     def __init__(self,day,month,year,hrs,mins,secs):
-        Clock.__init__(self,hrs,mins,secs)
-        Calendar.__init__(self,day,month,year)
+        # Clock.__init__(self,hrs,mins,secs)
+        # Calendar.__init__(self,day,month,year)
+        super(Clock,self).__init__(hrs,mins,secs)
+        super().__init__(day,month,year)
+
 
     def __str__(self):
-        return "{0:02d}/{1:02d}/{2:4d}, {3:02d}:{4:02d}:{5:02d}".format(self.day,self.month,self.year,self.hrs,self.mins,self.secs)
+        return "{0:02d}/{1:02d}/{2:4d}, {3:02d}:{4:02d}:{5:02d}".format(self.hrs,self.mins,self.secs,self.day,self.month,self.year)
 
