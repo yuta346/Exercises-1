@@ -30,13 +30,15 @@ class Vector3D:
         return False
     
     def __mul__(self,other):
+        if type(other)==int:
+            return Vector3D(self.x*other, self.y*other, self.z*other)
         return self.x*other.x + self.y*other.y + self.z*other.z
 
-    def __rmul__(self):
-        pass
+    def __rmul__(self,other):
+       if type(other)==int:
+            return Vector3D(self.x*other, self.y*other, self.z*other)
+       return self.x*other.x+ self.y*other.y + self.z*other.z
 
-
-    
     def __eq__(self,other):
         if self.x == other.x and self.y == other.y and self.z == other.z:
             return True
@@ -56,11 +58,22 @@ def sort_vectors(vect_lst):
     result.sort(key=lambda x: x[1])
     return [vect[0] for vect in result]
 
-vec1 = Vector3D(1, 5, 3)
-vec2 = Vector3D(4, 4, 1)
-vec3 = Vector3D(1, 5, 2)
+vec1 = Vector3D(1, 2, 3)
+vec2 = Vector3D(y=1, z=3)
+vec3 = Vector3D()
 vect_lst = [vec1, vec2, vec3]
-print(sort_vectors(vect_lst))
+# print(sort_vectors(vect_lst))
+# print(vec1 *3)  #== Vector3D(3, 15, 9)
+# print(3*vec3)
+rvec1 = vec1 * 3
+rvec2 = vec2 * 2
+lvec1 = 3 * vec1
+# print(rvec1)
+# print(rvec2)
+# print(lvec1)
+print(vec1 * vec2) 
+print(vec1 * vec3) 
+print(vec1 * vec1) 
 
 
 # vec1 = Vector3D(1, 5, 3)

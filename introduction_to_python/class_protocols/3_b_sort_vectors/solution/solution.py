@@ -33,10 +33,8 @@ class Vector3D:
         return self.x*other.x + self.y*other.y + self.z*other.z
     
     def __eq__(self,other):
-        if self.x == other.x and self.y == other.y and self.z == other.z:
-            return True
-        return False
-
+        return self.x == other.x and self.y == other.y and self.z == other.z
+  
     def __abs__(self):
         return math.sqrt(self.x**2 + self.y**2 + self.z**2)
     
@@ -44,12 +42,13 @@ class Vector3D:
         return Vector3D(self.x - other.x, self.y - other.y,self.z - other.z)
     
 def sort_vectors(vect_lst):
-    result = []
-    for vect in vect_lst:
-        abs_val = abs(vect)
-        result.append((vect,abs_val),)
-    result.sort(key=lambda x: x[1])
-    return [vect[0] for vect in result]
+    # result = []
+    # for vect in vect_lst:
+    #     abs_val = abs(vect)
+    #     result.append((vect,abs_val),)
+    return vect_lst.sort(key=lambda x: abs(x))
+    #return [vect[0] for vect in result]
+
 
 vec1 = Vector3D(1, 5, 3)
 vec2 = Vector3D(4, 4, 1)
