@@ -18,16 +18,12 @@ class Vector3D:
         return Vector3D(x,y,z)
     
     def __lt__(self,other):
-        magnitude1 = math.sqrt(self.x**2 + self.y**2 + self.z**2)
-        magnitude2 = math.sqrt(other.x**2 + other.y**2 + other.z**2)
-        if magnitude1<magnitude2: return True
+        if math.sqrt(self.x**2 + self.y**2 + self.z**2)<math.sqrt(other.x**2 + other.y**2 + other.z**2): return True
         return False
 
     
     def __gt__(self,other):
-        magnitude1 = math.sqrt(self.x**2 + self.y**2 + self.z**2)
-        magnitude2 = math.sqrt(other.x**2 + other.y**2 + other.z**2)
-        if magnitude1 > magnitude2: return True
+        if math.sqrt(self.x**2 + self.y**2 + self.z**2) > math.sqrt(other.x**2 + other.y**2 + other.z**2): return True
         return False
 
 
