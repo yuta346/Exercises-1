@@ -60,14 +60,20 @@ class linkedList:
     def insert_at_index(self,index,data):
         indx = 1
         curr = self.head
-        while curr:
-            if indx+1==index:
-                new_node = Node(data)
-                temp = curr.next
-                curr.next = new_node
-                new_node.next = temp
-            curr = curr.next
-            indx+=1
+        if indx == index:
+            new_node = Node(data)
+            new_node.next = curr
+            curr = new_node
+        else:
+            while curr:
+                if indx+1==index:
+                    new_node = Node(data)
+                    temp = curr.next
+                    curr.next = new_node
+                    new_node.next = temp
+                curr = curr.next
+                indx+=1
+
 
     def delete_item_by_value(self,x):
         curr = self.head
