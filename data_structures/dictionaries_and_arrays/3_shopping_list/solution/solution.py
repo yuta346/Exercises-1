@@ -1,20 +1,17 @@
 
 from operator import itemgetter
 def cheapest_store(grocery_store, shopping_list):
-    total_price = 0
+    total_price = 0.0
     store_dict = {}
-    for store in grocery_dict:
+    for store in grocery_store:
         for groccery in shopping_list: 
+            print(grocery_store)
             if groccery in list(grocery_store[store].keys()):
-                total_price += grocery_dict[store][groccery]
+                total_price += grocery_store[store][groccery]
             else: 
-                total_price +=5
+                total_price +=5.0
         store_dict[store] = total_price
-        total_price = 0    
-    
-    # sorted_dict = sorted(store_dict.items(), key=lambda x: (-x[1], x[0]))
-    # sorted_dict = sorted(store_dict,key=lambda x: x[1])
-    # return sorted_dict[0]
+        total_price = 0.0
     
     min_total = float('inf')
     min_total_store = " "
@@ -45,18 +42,18 @@ def cheapest_store(grocery_store, shopping_list):
 #                              "ketchup": 3.5}
 #                 }
 # shopping_list = ["ham", "salami", "ketchup", "mayo", "pasta", "cheese", "tuna"]
-# grocery_dict = {"Whole Foods": {"fish": 5.0,
-#                                      "meat": 6.0,
-#                                      "waffles": 3.0},
-#                      "Walmart": {"fish": 5.0,
-#                                  "bread": 2.0}
-#                     }
-# shopping_list = ["pasta", "cheese"]
-
-
 grocery_dict = {"Whole Foods": {"fish": 5.0,
                                      "meat": 6.0,
-                                     "waffles": 3.0}
+                                     "waffles": 3.0},
+                     "Walmart": {"fish": 5.0,
+                                 "bread": 2.0}
                     }
-shopping_list = ["fish", "bread"]
+shopping_list = ["pasta", "cheese"]
+
+
+# grocery_dict = {"Whole Foods": {"fish": 5.0,
+#                                      "meat": 6.0,
+#                                      "waffles": 3.0}
+#                     }
+# shopping_list = ["fish", "bread"]
 print(cheapest_store(grocery_dict, shopping_list)) #== "Walmart"
