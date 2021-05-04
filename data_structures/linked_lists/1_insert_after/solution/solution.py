@@ -19,22 +19,21 @@ class linkedList:
         return rest_of_the_list
     
 
-    def insert_after_item(self,x,data):
-        if self.head is None:
-            return None
-        if self.head.next is None:
-            new_node = Node(data)
-            self.head.next = new_node
 
+    def insert_after_item(self,x,data):
         curr = self.head
-        while curr.next:
+        while curr:
             if curr.data == x:
-                new_node = Node(data)
                 temp = curr.next
-                curr.next = new_node
+                new_node = Node(data)
+                curr.next  = new_node
                 new_node.next = temp
-                curr = curr.next
             curr = curr.next
+
+
+
+
+
 
     def display(self):
         curr = self.head

@@ -57,7 +57,6 @@ class linkedList:
             new_node = Node(data)
             curr.next = new_node
 
-
     def insert_at_index(self,index,data):
         indx = 1
         curr = self.head
@@ -69,7 +68,6 @@ class linkedList:
                 new_node.next = temp
             curr = curr.next
             indx+=1
-    
 
     def delete_item_by_value(self,x):
         curr = self.head
