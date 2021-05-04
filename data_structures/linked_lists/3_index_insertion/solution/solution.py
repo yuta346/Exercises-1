@@ -74,18 +74,19 @@ class linkedList:
                 curr = curr.next
                 indx+=1
 
-
     def delete_item_by_value(self,x):
-        curr = self.head
-        prev = self.head
-        if curr.data == x:
-            self.head = curr.next
+        if self.head is None:
             return 
+        curr = self.head
+        prev = curr
         while curr:
-            if curr.data== x:
+            if curr.data == x:
+                print(curr.data)
                 prev.next = curr.next
-            prev = prev.next
-            curr = curr.next.next
+                return 
+            else:
+                prev = curr
+                curr = curr.next
 
     def search(self, x):
         curr = self.head
