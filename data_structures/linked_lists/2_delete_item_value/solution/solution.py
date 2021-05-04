@@ -41,17 +41,35 @@ class linkedList:
         self.head = new_node
 
 
+    # def delete_item_by_value(self,x):
+    #     curr = self.head
+    #     prev = self.head
+    #     if curr.data == x:
+    #         self.head = curr.next
+    #         return 
+    #     while curr:
+    #         if curr.data== x:
+    #             prev.next = curr.next
+    #         prev = prev.next
+    #         curr = curr.next.next
+
+
     def delete_item_by_value(self,x):
-        curr = self.head
-        prev = self.head
-        if curr.data == x:
-            self.head = curr.next
+        if self.head is None:
             return 
+        curr = self.head
+        prev = curr
         while curr:
-            if curr.data== x:
+            if curr.data == x:
+                print(curr.data)
                 prev.next = curr.next
-            prev = prev.next
-            curr = curr.next.next
+                return 
+            else:
+                prev = curr
+                curr = curr.next
+
+
+
 
     def display(self):
         curr = self.head
@@ -68,6 +86,8 @@ items.head = Node(20)
 items.insert_at_start(40)
 items.insert_at_start(50)
 items.insert_at_start(10)
+items.display()
+print('________')
 items.delete_item_by_value(40)
 items.display()
 
