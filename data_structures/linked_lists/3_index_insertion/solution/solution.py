@@ -57,20 +57,20 @@ class linkedList:
             new_node = Node(data)
             curr.next = new_node
 
+
     def insert_at_index(self,index,data):
         indx = 1
         curr = self.head
-        prev = self.head
         while curr:
-            if indx==index:
+            if indx+1==index:
                 new_node = Node(data)
-                temp = prev.next
-                prev.next = new_node
+                temp = curr.next
+                curr.next = new_node
                 new_node.next = temp
-                prev = prev.next
             curr = curr.next
             indx+=1
     
+
     def delete_item_by_value(self,x):
         curr = self.head
         prev = self.head
