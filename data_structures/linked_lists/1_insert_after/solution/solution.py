@@ -21,6 +21,10 @@ class linkedList:
 
 
     def insert_after_item(self,x,data):
+        if self.head is None:
+            new_node = Node(data)
+            self.head = new_node 
+
         curr = self.head
         while curr:
             if curr.data == x:
@@ -29,10 +33,6 @@ class linkedList:
                 curr.next  = new_node
                 new_node.next = temp
             curr = curr.next
-
-
-
-
 
 
     def display(self):
