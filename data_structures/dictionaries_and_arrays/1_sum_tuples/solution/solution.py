@@ -1,10 +1,11 @@
 #Completed
 def sum_tuples(tlst):
-    result = []
-    for tup in tlst:
-        Sum = sum(list(tup))
-        result.append(Sum)
-    return result
+    # result = []
+    # for tup in tlst:
+    #     Sum = sum(list(tup))
+    #     result.append(Sum)
+    # return result
+    return [sum(x) for x in tlst]
 
 
 
