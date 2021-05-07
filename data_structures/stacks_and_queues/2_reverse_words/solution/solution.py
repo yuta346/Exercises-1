@@ -1,13 +1,14 @@
 
 def reverse_words(sentence):
-    sentence_list = sentence.split(' ')
-    result =[]
-    for sentence in sentence_list:
-        result.insert(0,sentence)
-    return " ".join(result)
+    # sentence_list = sentence.split(' ')
+    # result =[]
+    # for sentence in sentence_list:
+    #     result.insert(0,sentence)
+    # return " ".join(result)
 
 
-
+    if sentence == '':
+        return 
     sentence_list = sentence.split(' ')
     stack = []
     result = []
@@ -16,13 +17,6 @@ def reverse_words(sentence):
     while stack:
         result.append(stack.pop())
     return " ".join(result)
-
-
-
-
-
-
-
 
 
 

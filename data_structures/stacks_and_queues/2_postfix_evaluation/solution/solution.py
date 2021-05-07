@@ -5,7 +5,7 @@ def postfix_eval(exp):
     if len(exp)==1:
         return int(exp)
     for i in exp:
-        if i in "0123456789":
+        if i.isdigit():
             queue.append(i)
         elif queue:
             if i == '+':

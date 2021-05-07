@@ -52,6 +52,8 @@ class Queue:
                 if cur1.value == cur2.value:
                     cur1 = cur1.next
                     cur2 = cur2.next
-                return True
+                else:
+                    return False
+            return True
         return False
         

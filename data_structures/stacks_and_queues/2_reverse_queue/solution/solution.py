@@ -52,10 +52,14 @@ class Queue:
                 if cur1.value == cur2.value:
                     cur1 = cur1.next
                     cur2 = cur2.next
-                return True
+                else:
+                    return False
+            return True
         return False
     
     def reverse_queue(self):
+        if self.head_node is None:
+            return 
         stack = []
         cur = self.head_node
         while cur:
@@ -63,21 +67,20 @@ class Queue:
             cur = cur.next
         while stack:
             self.enqueue(stack.pop())
-        return None
         
         
-queue = Queue()
-queue.enqueue(1)
-queue.enqueue(2)
-queue.enqueue(3)
+# queue = Queue()
+# queue.enqueue(1)
+# queue.enqueue(2)
+# queue.enqueue(3)
 
-retqueue = Queue()
-retqueue.enqueue(3)
-retqueue.enqueue(2)
-retqueue.enqueue(1)
+# retqueue = Queue()
+# retqueue.enqueue(3)
+# retqueue.enqueue(2)
+# retqueue.enqueue(1)
 
-queue2 = Queue()
-queue2.enqueue(1)
+# queue2 = Queue()
+# queue2.enqueue(1)
 
 queue3 = Queue()
-print(queue.reverse_queue())
+queue3.reverse_queue()
