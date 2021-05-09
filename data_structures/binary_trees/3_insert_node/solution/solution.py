@@ -8,20 +8,23 @@ class Node:
 
 
     def insert(self,key):
-        if self is not None:
-            return self._insert(self,key)
-        
-    def _insert(self,node,key):
-        if node.left is None:
-            new_node = Node(key)
-            node.left = new_node
-        self._insert(node.left,key)
-        self._insert(node.right,key)
-        return node
+        result = Preorder(self)
+        for node in result:
+            if node.left is None:
+                new_node = Node(key)
+                node.left = new_node
+                return 
+            elif node.right is None:
+                new_node = Node(key)
+                node.right = new_node
+                return 
 
 
-        
-    
+def Preorder(root):
+    if root is None: 
+        return []
+    return [root]+ Preorder(root.left)  + Preorder(root.right)
+           
 
 items = Node(6)
 items.left = Node(11)

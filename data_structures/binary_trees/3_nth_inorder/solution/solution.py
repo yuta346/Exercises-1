@@ -8,15 +8,12 @@ def NthInorder(root, n):
     result = _NthInorder(root)
     if len(result)>=n:
         return result[n-1]
-    return "no 6-th element"
+    return f"no {n}-th element"
     
 def _NthInorder(root):
     if root is None:
         return []
     return  _NthInorder(root.left)+[root.key]+_NthInorder(root.right)
-
-
-
 
 
 items = Node(5)
