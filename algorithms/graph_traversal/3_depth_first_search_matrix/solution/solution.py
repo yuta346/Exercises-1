@@ -5,12 +5,12 @@ matrix = [
         [0, 0, 0, 1]
     ]
 def exists_path(matrix,origin,destination):
-    if origin > len(matrix)-1 or destination > len(matrix)-1:
+    if origin >= len(matrix)-1 or destination >= len(matrix)-1:
         return False
     visited = [0]*len(matrix)
     stack = [origin]
     while stack:
-        current = stack.pop(0)
+        current = stack.pop()
         for vertex in range(len(visited)):
             if matrix[current][vertex]==1 and visited[vertex]==0:
                 visited[vertex]=1
