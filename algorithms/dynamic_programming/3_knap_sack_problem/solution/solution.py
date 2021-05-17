@@ -11,7 +11,6 @@ def knap_sack(x,items): #(value, weight) return maximum value
                     max_value = value[0] + value2[0]
     print(max_value)
     return max_value
-            
 
 knap_sack(5, {"hat": (1,2), "sunscreen": (3,2), "food": (6,4), "water": (5,3)}) == 8
 knap_sack(5, {}) == 0
