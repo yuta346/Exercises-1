@@ -16,7 +16,4 @@ def knap_sack(x,items): #(value, weight) return maximum value
 knap_sack(5, {"hat": (1,2), "sunscreen": (3,2), "food": (6,4), "water": (5,3)}) == 8
 knap_sack(5, {}) == 0
 knap_sack(0, {"hat": (1,2), "sunscreen": (3,2), "food": (6,4), "water": (5,3)}) == 0
-knap_sack(5, {"hat": (2,2), "sunscreen": (3,2), "food": (4,4)}) == 5 #value, weight
-
-
-#[('food', (4, 4)), ('sunscreen', (3, 2)), ('hat', (2, 2))]
+knap_sack(5, {"hat": (2,2), "sunscreen": (3,2), "food": (4,4)}) == 5 
