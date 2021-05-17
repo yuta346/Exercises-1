@@ -4,7 +4,7 @@ def knap_sack(x,items):
     max_value = 0
     max_weight  = x
     for key, value in sorted_items:
-        for key2, value2 in sorted_items[int(len(sorted_items) // 2):]:
+        for key2, value2 in sorted_items[1:]:
             if value[1] + value2[1] <= max_weight and key != key2:
                 max_weight = max_weight - (value[1] + value2[1])
                 if max_value < value[0] + value2[0]:
