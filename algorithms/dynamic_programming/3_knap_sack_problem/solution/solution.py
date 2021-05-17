@@ -1,10 +1,10 @@
 
-def knap_sack(x,items): #(value, weight) return maximum value
+def knap_sack(x,items): 
     sorted_items = sorted(items.items(), key = lambda x: (-x[1][0]))
     max_value = 0
     max_weight  = x
     for key, value in sorted_items:
-        for key2, value2 in sorted_items[int(len(sorted_items)//2):]:
+        for key2, value2 in sorted_items[int(len(sorted_items) // 2):]:
             if value[1] + value2[1] <= max_weight and key != key2:
                 max_weight = max_weight - (value[1] + value2[1])
                 if max_value < value[0] + value2[0]:
