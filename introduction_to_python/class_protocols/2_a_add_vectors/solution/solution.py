@@ -13,3 +13,7 @@ class Vector3D:
         y = self.y + other.y
         z = self.z + other.z
         return Vector3D(x,y,z)
+
+vec1 = Vector3D(1, 2, 3)
+vec2 = Vector3D(4, 5, 6)
+print(vec1 + vec2)

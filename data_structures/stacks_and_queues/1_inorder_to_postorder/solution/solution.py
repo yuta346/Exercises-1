@@ -1,15 +1,14 @@
-
-#Completed
+from collections import deque
 def inorder_to_postorder(exp):
     arr = []
-    queue = []
+    queue = deque()
     for char in exp:
         if char not in ['+','*','-','%','/']:
             arr.append(char)
         else:
             queue.append(char)
     while queue:
-        opr = queue.pop(0)
+        opr = queue.popleft()
         arr.append(opr)
     return "".join(arr)
 

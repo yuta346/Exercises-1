@@ -11,11 +11,11 @@ def minimum_parentheses(pstr):
     #         count_to_add+=1
     # return count_to_add + count_open
 
+ 
     stack = []
     for i in pstr:
-        print(stack)
-        if i == ')':
-            if stack and stack[-1]=='(':
+        if stack:
+            if i == ')' and stack[-1] == '(':
                 stack.pop()
                 continue
         stack.append(i)
