@@ -10,8 +10,13 @@
 # reverse("hello") == "olleh"
 # ```
 
+# def reverse(string):
+#     if not string:
+#         return string
+#     return string[-1]+reverse(string[:-1])
+# print(reverse("hellooooo"))
+
+
 def reverse(string):
-    if not string:
-        return string
-    return string[-1]+reverse(string[:-1])
+    return "" if string == "" else reverse(string[1:]) + string[0]
 print(reverse("hellooooo"))
