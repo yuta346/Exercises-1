@@ -17,8 +17,8 @@ class Person:
             self.spouse = None
             spouse.spouse = None
 
-    def give_birth(self,*args):
-        for name in args:
+    def give_birth(self,name):
+        if name:
             baby = Child(name,0,None,[],[self])
             self.children.append(baby)
             if self.spouse:

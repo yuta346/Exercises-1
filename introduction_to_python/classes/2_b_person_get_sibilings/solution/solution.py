@@ -27,7 +27,7 @@ class Child(Person):
     def get_siblings(self):
         child_set = set()
         for parent in self.parents:
-           child_set = list((set(child_set) |set(parent.children)))
+           child_set = list((set(child_set) | set(parent.children)))
         siblings = sorted(child_set,key=attrgetter('age'))
         return [sibling.name for sibling in siblings if sibling is not self]
 
