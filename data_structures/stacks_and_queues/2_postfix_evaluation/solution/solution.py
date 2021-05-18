@@ -1,6 +1,7 @@
 #Completed
+from collections import deque
 def postfix_eval(exp):
-    queue = []
+    queue = deque()
     result = 0
     if len(exp)==1:
         return int(exp)
@@ -9,13 +10,13 @@ def postfix_eval(exp):
             queue.append(i)
         elif queue:
             if i == '+':
-                result = int(queue.pop(0)) + int(queue.pop(0))
+                result = int(queue.popleft()) + int(queue.popleft())
             elif i == '-':
-                result = int(queue.pop(0)) - int(queue.pop(0))
+                result = int(queue.popleft()) - int(queue.popleft())
             elif i == '*':
-                result = int(queue.pop(0)) * int(queue.pop(0))
+                result = int(queue.popleft()) * int(queue.popleft())
             elif i == '/':
-                result = int(queue.pop(0)) / int(queue.pop(0))
+                result = int(queue.popleft()) / int(queue.popleft())
         if result != 0: 
             queue.insert(0,result)
     return result
