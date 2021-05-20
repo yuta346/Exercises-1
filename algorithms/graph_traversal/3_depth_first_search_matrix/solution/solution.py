@@ -15,10 +15,9 @@ def exists_path(matrix,origin,destination):
             if matrix[current][vertex]==1 and visited[vertex]==0:
                 visited[vertex]=1
                 stack.append(vertex)
-    if visited[destination] == 1: 
-        return True
-    else:
-         return False
+            if visited[destination] == 1: 
+                return True
+    return False
 
 
 print(exists_path(matrix, 0, 2)) == True

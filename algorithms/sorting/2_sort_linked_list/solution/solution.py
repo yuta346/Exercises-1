@@ -21,52 +21,51 @@ class LinkedList:
         return rest_of_the_list
     
     def sort_ll(self):
-        self._sort_ll(self.head)
+        self.head = self._sort_ll(self.head)
         
-    def _sort_ll(self,head):
-        if not head or head.next is None:
-            return 
+    def _sort_ll(self, head):
+        if head is None or head.next is None:
+            return head
         mid = head
         slow = head
         fast = head
         
-        while fast.next and fast.next.next:
+        while fast and fast.next:
             mid = slow
             slow = slow.next
             fast = fast.next.next
         mid.next = None
-        left_list = self._sort_ll(head)
-        right_list = self._sort_ll(slow)
-        return self.merge(left_list, right_list)
+        left = self._sort_ll(head)
+        right = self._sort_ll(slow)
+        return self.merge(left,right)
     
-    def merge(self,left_list, right_list):
-        temp = ListNode(None)
-        curr = temp
-        while left_list and right_list:
-            if left_list.value < right_list.value:
-                curr.next = left_list
-                left_list = left_list.next
-            else: 
-                curr.next = right_list
-                right_list = right_list.next
-            curr = curr.next
-        
-        while left_list:
-            curr.next = left_list
-            left_list = left_list.next
-        
-        while right_list:
-            curr.next = right_list
-            right_list = right_list.next
-        return temp.next
-                
-    def display(self):
-            curr = self.head
-            while curr.next:
-                print(curr.value)
-                curr = curr.next
+    def merge(self,left,right):
+        dummy = ListNode(None)
+        cur = dummy
+        while left and right:
+            if left.value < right.value:
+                cur.next = left
+                left = left.next
+            else:
+                cur.next = right
+                right = right.next
+            cur = cur.next
+        if left:
+            cur.next = left
+        if right:
+            cur.next = right
+        return dummy.next
 
-myList = LinkedList.from_range(1,4)
+    def display(self):
+        curr = self.head
+        while curr:
+            print(curr.value)
+            curr = curr.next
+
+myList = LinkedList()
+myList.head = ListNode(5)
+myList.head.next  = ListNode(9)
+myList.head.next.next  = ListNode(7)
 myList.display()
 myList.sort_ll()
 myList.display()

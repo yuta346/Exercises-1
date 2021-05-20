@@ -13,25 +13,50 @@
 # then use a greedy algorithm to find an optimal cookie allocation.
 
 
-def feed_children(cookies, children):
+# def feed_children(cookies, children):
 
-   max_num = 0
-   cookies.sort()
-   children.sort()
-   cookie_ind = len(cookies)-1
-   child_ind= len(children)-1
+#    max_num = 0
+#    cookies.sort()
+#    children.sort()
+#    cookie_ind = len(cookies)-1
+#    child_ind= len(children)-1
   
-   while(cookie_ind >= 0 and child_ind >= 0 ):
-       if(cookies[cookie_ind] >= children[child_ind]):
-           max_num += 1
-           cookie_ind -= 1
-           child_ind -= 1
-       else:
-           child_ind -= 1
-   return max_num
+#    while(cookie_ind >= 0 and child_ind >= 0 ):
+#        if(cookies[cookie_ind] >= children[child_ind]):
+#            max_num += 1
+#            cookie_ind -= 1
+#            child_ind -= 1
+#        else:
+#            child_ind -= 1
+#    return max_num
 
-    # return len((set(cookies) & set(children))) 
-    
+
+
+
+
+
+
+
+
+
+
+
+def feed_children(cookies, children):
+    max_num = 0
+    cookies.sort()
+    children.sort()
+    cookies_index = len(cookies)-1
+    children_index = len(cookies)-1
+
+    while cookies_index >= 0 and children_index >= 0:
+        if cookies[cookies_index] >= children[children_index]:
+            cookies_index-=1
+            children_index-=1
+            max_num+=1
+        else:
+            children_index-=1
+    return max_num
+
 cookies = [1,3,2,5,4]
 children = [5,2,3,4,5]
 print(feed_children(cookies, children))

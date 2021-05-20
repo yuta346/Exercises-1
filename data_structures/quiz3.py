@@ -13,16 +13,32 @@ class Tree:
         self.root_node = root_node
 
 my_tree = Tree()
+my_tree.root_node = TreeNode(4)
 my_tree = TreeNode(4)
-my_tree.left = TreeNode(2)
-my_tree.right = TreeNode(6)
-my_tree.left.left = TreeNode(1)
-my_tree.left.right = TreeNode(3)
-my_tree.right.left = TreeNode(5)
-my_tree.right.right = TreeNode(7)
 print(my_tree.value)
-print(my_tree.left.value)
-print(my_tree.right.right.value)
+# my_tree.root_node.left = TreeNode(2)
+# my_tree.root_node.right = TreeNode(6)
+# my_tree.root_node.left.left = TreeNode(1)
+# my_tree.root_node.left.right = TreeNode(3)
+# my_tree.root_node.right.left = TreeNode(5)
+# my_tree.root_node.right.right = TreeNode(7)
+# print(my_tree.root_node.value)
+# print(my_tree.root_node.left.value)
+# print(my_tree.root_node.right.right.value)
+
+
+# my_tree = Tree(TreeNode(4))
+# my_tree.root_node.left = TreeNode(2)
+# my_tree.root_node.right = TreeNode(6)
+# my_tree.root_node.left.left = TreeNode(1)
+# my_tree.root_node.left.right = TreeNode(3)
+# my_tree.root_node.right.left = TreeNode(5)
+# my_tree.root_node.right.right = TreeNode(7)
+# print(my_tree.root_node.left.value)
+# print(my_tree.root_node.value)
+# print(my_tree.root_node.left.value)
+# print(my_tree.root_node.right.right.value)
+
 
 ############
 #Question 2:
@@ -61,9 +77,9 @@ class LinkedList:
             print(curr.value)
             curr = curr.next
 
-myList = LinkedList.from_range(1,4)
-print('Original linked list')
-myList.display()
-myList.remove_tail()
-print('After deletion')
-myList.display()
+# myList = LinkedList.from_range(1,4)
+# print('Original linked list')
+# myList.display()
+# myList.remove_tail()
+# print('After deletion')
+# myList.display()
