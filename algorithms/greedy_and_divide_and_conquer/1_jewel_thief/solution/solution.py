@@ -1,24 +1,42 @@
-def sort_tuples(tup):
-    tup.sort(key = lambda t: t[1])
-    tup.reverse()
-    return tup
 
 def steal_jewels(x, jewels):
-    max_val = 0
-    sorted_value_jewels = sort_tuples(jewels)
-    for jewel in sorted_value_jewels:
-        jewel_weight = jewel[0]
-        jewel_value = jewel[1]
-        if x == 0:
-            return max_val
-        elif jewel_weight <= x:
-            max_val += jewel_value
-            x = x - jewel_weight
+    if len(jewels)==0:
+        return 0
+    max_value = 0
+    sorted_jewels = sorted(jewels, key=lambda x: -x[1]/x[0])
+    for weight, value in sorted_jewels:
+        if weight == 0:
+            return 0
+        if x >= weight:
+            x -= weight
+            max_value += value
         else:
-            unit_val = jewel_value/jewel_weight
-            max_val += x * unit_val
-            return max_val
-    return max_val
+            fraction_value = value/weight
+            max_value += fraction_value * x
+            return max_value
+    return max_value
 
 jewels = [(1, 4), (2, 8), (3, 15), (9, 50)]
-print(steal_jewels(10, jewels))
+jewels1 = [(1, 4), (2, 8), (3, 15), (9, 50)]
+jewels2 = [(1, 1)]
+jewels3 = [(1, 1), (2, 8), (3, 15), (4,24)]
+# steal_jewels(10, jewels) == 55
+# steal_jewels(10, jewels1) == 55
+# steal_jewels(10, []) == 0
+steal_jewels(1, jewels2) == 1
+steal_jewels(3, jewels2) == 1
+# steal_jewels(3, jewels3) == 18
+
+
+
+
+
+
+
+
+
+
+
+
+
+
